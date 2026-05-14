@@ -1,6 +1,6 @@
 # Lightweight IoT Intrusion Detection & Prevention System (IDS/IPS)
 
-This project is a machine learning-based Intrusion Detection and Prevention System specifically designed for Internet of Things (IoT) edge devices (like smart routers or Raspberry Pis). 
+This project is a machine learning-based Intrusion Detection and Prevention System specifically designed for Internet of Things (IoT) edge devices (like smart routers or Raspberry Pie). 
 
 IoT environments are characterized by low-compute power and highly predictable, low-bandwidth network traffic. This project trains an IDS on the `RT_IOT2022` dataset, prunes it down to the top 10 most critical network flow features, and deploys it as an active, real-time network shield capable of instantly dropping malicious connections.
 
@@ -29,7 +29,8 @@ To run the real-time `live_sniffer.py` on Windows, you must have the underlying 
 
 1. Download **Npcap** from [npcap.com](https://npcap.com/).
 2. Run the installer and **check the box for "Install Npcap in WinPcap API-compatible Mode"**.
-3. Install Python dependencies:
+3. RT_IOT2022 Dataset: Download the raw data from the UCI Machine Learning Repository(https://archive.ics.uci.edu/dataset/942/rt-iot2022). Ensure the CSV file is placed in the project root folder before running the training script.
+4. Install Python dependencies:
    ```bash
    pip install pandas numpy scikit-learn joblib matplotlib seaborn nfstream psutil
    ```
